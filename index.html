@@ -8,14 +8,22 @@
 </head>
 
 <body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="scripts/jquery.js"></script>
 	<script src="scripts/wikiviewer.js"></script>
+
 
 	<h1>Lazy Wikipedia</h1>
 	<div class="container-fluid">
 		<div class="center-box">
-			<button class="btn-primary" onclick=openRandomWiki()>Click here for a random article</button>
+			<div class="row">
+				<form><input id="searchText" type="text" type="search" placeholder="How can i help you?"></form>
+			</div>
+			<div class="row">
+				<button class="btn-primary" id="searchButton">Search</button>
+				<button id="randomWiki">Random</button>
+			</div>
 
+			<div id="content"></div>
 		</div>
 		<div class="footer">Coded by Lars Kerick</div>
 	</div>

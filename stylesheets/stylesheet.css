@@ -1,5 +1,5 @@
 body {
-	background-color:darkcyan;
+	background-color: darkcyan;
 	color: forestgreen;
 }
 
@@ -9,12 +9,16 @@ h1 {
 	font-family: 'Verdana';
 }
 
+.row {
+	color: black;
+}
+
 .center-box {
 	font-family: 'Cabin';
 	font-size: 24;
 	text-align: center;
 	width: 100%;
-	color:cornsilk;
+	color: cornsilk;
 	position: absolute;
 	bottom: 55%;
 }
@@ -27,4 +31,12 @@ h1 {
 	height: 20px;
 	position: absolute;
 	bottom: 0;
+}
+
+.new-entry-box {
+	font-family: monospace;
+	font-size: 12px;
+	margin-top: -15px;
+	background-color: darkblue;
+	text-align: left;
 }
