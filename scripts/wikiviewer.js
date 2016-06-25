@@ -18,10 +18,18 @@ $(document).ready(function () {
 				dataType: "jsonp"
 			})
 			.done(function (json) {
-				$("#content").prepend("<div class=\"new-entry-box\"><h3>" + json.query.search[0].title + "</h3>" + json.query.search[0].snippet + "</div>");
-				$("#content").animate({
-					scrollTop: $("#content").scrollHeight
-				}, 500);
+				for (item in json.query.search) {
+					var title = json.query.search[item].title;
+					var snippet = json.query.search[item].snippet;
+					var linktitle = title;
+
+					linktitle = linktitle.split(' ').join('_');
+
+					var link = "http://en.wikipedia.org/wiki/" + linktitle;
+
+					$("#content").append("<div class=\"new-entry-box\"><h3>" + "<a href=" + link + ">" + title + "</a></h3>" + snippet + "</div>");
+				}
+
 
 			})
 			.fail(function (xhr, status, errorThrown) {
